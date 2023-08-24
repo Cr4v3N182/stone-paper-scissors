@@ -1,5 +1,7 @@
 import PySimpleGUI as sg
 
+sg.theme("DarkAmber")
+
 label = sg.Text("Choose stone, paper or scissors")
 stone_button = sg.Button("Stone", key="stone", )
 paper_button = sg.Button("Pape", key="paper")
