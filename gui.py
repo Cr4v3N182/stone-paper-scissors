@@ -1,6 +1,6 @@
 import PySimpleGUI as sg
 
-dictionary_of_items = {1 : "stone", 2 : "paper", 3 : "scissors"}
+
 
 sg.theme("DarkAmber")
 
