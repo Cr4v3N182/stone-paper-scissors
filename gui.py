@@ -13,6 +13,7 @@ layout = [[label], [[stone_button, paper_button, scissors_button]]]
 
 window = sg.Window("Stone-Paper-Scissor-APP", layout=layout, size= (400, 200), element_justification='c')
 while True:
-    window.read()
+    event, value = window.read()
+
 
 window.close()
