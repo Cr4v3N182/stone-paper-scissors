@@ -5,7 +5,7 @@ import functions
 
 sg.theme("DarkAmber")
 
-score = 0
+score = []
 
 label = sg.Text("Choose stone, paper or scissors")
 stone_button = sg.Button("Stone", key="stone")
@@ -21,22 +21,22 @@ while True:
     match event:
         case "stone":
             if "stone" == functions.draw_function():
-                score += 1
-                sg.popup("You Win", str(score))
+                score.append(value)
+                sg.popup("You Win", len(score))
             else:
-                sg.popup("You lose, Your actial score is:", str(score))
+                sg.popup("You lose, Your actial score is:", len(score))
         case "paper":
             if "paper" == functions.draw_function():
-                score += 1
-                sg.popup("You Win", str(score))
+                score.append(value)
+                sg.popup("You Win", len(score))
             else:
-                sg.popup("You lose, Your actial score is:", str(score))
+                sg.popup("You lose, Your actial score is:", len(score))
         case "scissors":
             if "scissors" == functions.draw_function():
-                score += 1
-                sg.popup("You Win", str(score))
+                score.append(value)
+                sg.popup("You Win", len(score))
             else:
-                sg.popup("You lose, Your actial score is:", str(score))
+                sg.popup("You lose, Your actial score is:", len(score))
         case sg.WIN_CLOSED:
             break
 
