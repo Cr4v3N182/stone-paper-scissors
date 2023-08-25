@@ -24,21 +24,25 @@ while True:
         case "stone":
             if "stone" == functions.draw_function():
                 score.append(value)
-                sg.popup("You Win", len(score))
+                sg.popup("You Win")
             else:
-                sg.popup("You lose, Your actial score is:", len(score))
+                sg.popup("You lose")
         case "paper":
             if "paper" == functions.draw_function():
                 score.append(value)
-                sg.popup("You Win", len(score))
+                sg.popup("You Win")
             else:
-                sg.popup("You lose, Your actial score is:", len(score))
+                sg.popup("You lose")
         case "scissors":
             if "scissors" == functions.draw_function():
                 score.append(value)
-                sg.popup("You Win", len(score))
+                sg.popup("You Win")
             else:
-                sg.popup("You lose, Your actial score is:", len(score))
+                sg.popup("You lose")
+        case "score":
+            window["output"].update(value=f'Your score: {len(score)}')
+        case "exit":
+            break
         case sg.WIN_CLOSED:
             break
 
