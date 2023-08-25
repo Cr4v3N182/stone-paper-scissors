@@ -6,8 +6,6 @@ def draw_function():
     random_num = randint(1,3)
     item = dict_items[random_num]
     return item
-print(draw_function())
-
 
 
 
